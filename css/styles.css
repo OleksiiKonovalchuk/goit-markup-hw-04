@@ -8,6 +8,7 @@
     --body-main-color: #FFFFFF;
     --body-secondary-color: #2F303A;
     --body-third-color: #F5F4FA;
+    --icon-background-color: #AFB1B8;
 }
 body {
     font-family: var(--font-family-main);
@@ -32,7 +33,6 @@ button {
     display: block;
     margin: 0 auto;
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     color: var(--body-main-color);
     background-color: var(--logo-main-color);
     font-family: var(--font-family-main);
@@ -140,6 +140,7 @@ color: var(--logo-main-color);
     align-items: center;
 }
 .contact-link-icon {
+    fill: var(--main-text-color);
     margin-right: 10px;
 }
 .contact-link:hover .contact-link-icon, .contact-link:focus .contact-link-icon {
@@ -289,17 +290,80 @@ color: var(--logo-main-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+.social-list-item {
+    height: 44px;
+    width: 44px;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.social-list-icon {
+    fill: var(--icon-background-color);
+}
+.social-link:hover, .social-link:focus {
+    background-color: var(--logo-main-color);
+}
+.social-link:hover .social-list-icon,
+.social-link:focus .social-list-icon {
+    fill: var(--body-main-color);
+}
+/* ============= CLIENTS ============= */
+.client-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+.client-list-item {
+    width: 170px;
+    height: 92px;
+}
+.client-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--icon-background-color);
+    border-radius: 4px;
+}
 
+.client-list-icon {
+    width: 106px;
+    height: 60px;
+    fill: var(--icon-background-color);
+}
+.client-list-link:hover, .client-list-link:focus {
+    border: 1px solid var(--logo-main-color);
+}
+.client-list-link:hover .client-list-icon,
+.client-list-link:focus .client-list-icon {
+    fill: var(--logo-main-color);
+}
  /* ============= footer ========= */
 .footer {
     background-color: var(--body-secondary-color);
     padding: 60px 0;
 }
 .logo-footer {
+    width: auto;
     font-family: var(--font-family-logo);
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.9;
+    line-height: 1.19;
     text-decoration: none;
 
     color: var(--body-main-color);
@@ -317,6 +381,40 @@ color: var(--logo-main-color);
 }
 .adress-list-link {
     color: #FFFFFF99;
+}
+.footer-h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--body-main-color);
+}
+.footer-wrapper {
+    display: flex;
+}
+.social-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list-icon-footer {
+    fill: var(--body-main-color);
+}
+.social-link-footer:hover, .social-link-footer:focus {
+    background-color: var(--logo-main-color);
+}
+.footer-wrapper-item:last-child {
+    padding-top: 12px;
+}
+.footer-wrapper-item:not(:last-child) {
+    margin-right: 70px;
+}
+.social-list-footer {
+    margin-top: 20px;
 }
 /* ======== portfolio  ============
 body*/
@@ -338,6 +436,7 @@ body*/
 .portfolio-btn:hover, .portfolio-btn:focus {
     background-color: var(--logo-main-color);
     color: var(--body-main-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-btn-list {
     display: flex;
@@ -355,10 +454,14 @@ body*/
 .portfolio-list-item {
     background-color: var(--body-main-color);
 }
+.portfolio-list-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-heading {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--secondary-text-color);
 
     margin-bottom: 4px;
 }
